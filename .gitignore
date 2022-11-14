@@ -1,0 +1,9 @@
+*.pyc
+*~
+/.idea
+__pycache__
+/env
+db.sqlite3
+.DS_Store
+/P12_EpicEvents/db_local_settings.py
+migrations/
