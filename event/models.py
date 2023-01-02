@@ -47,7 +47,8 @@ class Client(models.Model):
     company_name = models.CharField(max_length=255)
     date_created = models.DateTimeField(auto_now_add=True)
     date_updated = models.DateTimeField(auto_now=True)
-    sales_contact = models.ForeignKey('authentication.User', related_name='contact_of_client', on_delete=models.CASCADE)
+    sales_contact = models.ForeignKey('authentication.User', related_name='contact_of_client', null=True, blank=True,
+                                      on_delete=models.CASCADE)
 
     def __str__(self):
         return f'{self.first_name} {self.last_name}'
